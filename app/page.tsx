@@ -48,7 +48,8 @@ export default function Home() {
           </div>
         </form>
         <div className="text-gray-400 py-3.5">
-           <Link href="/contact">Contact</Link>
+           <p>Already have an Account? </p>
+           <Link href="/login">Login</Link>
         </div>
       </div>
     </div>
