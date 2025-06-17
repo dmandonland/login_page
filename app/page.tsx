@@ -1,7 +1,11 @@
+"use client";
+
 // app/page.tsx
 import Link from 'next/link';
+import {useRouter} from 'next/navigation';
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 to-indigo-700 flex items-center justify-center">
       <div className="bg-[#fff] text-[#333] p-8 rounded-[12px] [box-shadow:0_8px_24px_rgba(0,_0,_0,_0.2)] w-[320px] text-center">
@@ -42,6 +46,7 @@ export default function Home() {
             <button
               type="submit"
               className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              onClick={() => router.push("/enter")}
             >
               Sign Up
             </button>
