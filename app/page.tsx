@@ -3,59 +3,70 @@
 // app/page.tsx
 import Link from 'next/link';
 import {useRouter} from 'next/navigation';
+import { useState } from 'react';
 
 export default function Home() {
   const router = useRouter();
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent form refresh
+
+    setShowSuccess(true); // Show success popup
+
+    // Navigate after 2 seconds
+    setTimeout(() => {
+      router.push("/dashboard");
+    }, 2000);
+  };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 to-indigo-700 flex items-center justify-center">
-      <div className="bg-[#fff] text-[#333] p-8 rounded-[12px] [box-shadow:0_8px_24px_rgba(0,_0,_0,_0.2)] w-[320px] text-center">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600">
+      <div className="bg-white text-[#333] p-10 rounded-2xl shadow-2xl w-[350px] text-center">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-6 text-[#6a0dad]">Sign Up</h1>
-          <p className="mt-2 text-gray-600">Please create your account</p>
+          <img src="/logo.svg" alt="Logo" className="mx-auto mb-6 w-24 h-24" />
+          <h1 className="text-3xl font-montserrat mb-4 text-transparent bg-clip-text bg-gray-900">Sign Up</h1>
+          <p className="mb-6 text-gray-500">Sign up to see photos and videos from your friends.</p>
         </div>
-        <form className="mt-8 space-y-6">
+        <form className="space-y-5" onSubmit={handleSubmit}>
           <div className="space-y-4">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email address
-              </label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 autoComplete="email"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                placeholder="Email address"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400 bg-gray-50"
               />
             </div>
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                Password
-              </label>
               <input
                 id="password"
                 name="password"
                 type="password"
                 autoComplete="new-password"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                placeholder="Password"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400 bg-gray-50"
               />
             </div>
           </div>
-          <div>
-            <button
-              type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              onClick={() => router.push("/enter")}
-            >
-              Sign Up
-            </button>
-          </div>
+          <button
+            type="submit"
+            className="w-full py-2 px-4 rounded-md shadow-sm text-sm font-semibold text-white bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:from-pink-600 hover:to-yellow-400 transition-colors duration-200"
+          >
+            Sign Up
+          </button>
         </form>
-        <div className="text-gray-400 py-3.5">
-           <p>Already have an Account? </p>
-           <Link href="/login">Login</Link>
+        <div className="text-gray-500 py-4">
+          <p>Already have an account? <Link href="/login" className="text-pink-500 font-semibold hover:underline">Login</Link></p>
         </div>
+        {showSuccess && (
+          <div className="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow">
+            ✅ Sign Up Successful!
+          </div>
+        )}
       </div>
     </div>
   );
