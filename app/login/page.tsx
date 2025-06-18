@@ -6,7 +6,8 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-purple-900 to-pink-400 flex items-center justify-center">
       <div className="bg-[#fff] text-[#333] p-8 rounded-[12px] [box-shadow:0_8px_24px_rgba(0,_0,_0,_0.2)] w-[320px] text-center">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-6 text-[#6a0dad]">Log In</h1>
+        <img src="/logo.svg" alt="Logo" className="mx-auto mb-6 w-24 h-24" />
+          <h1 className="text-3xl font-montserrat font-bold mb-6 text-[#6a0dad]">Log In</h1>
           <p className="mt-2 text-gray-600">Login to your account</p>
         </div>
         <form className="mt-8 space-y-6">
