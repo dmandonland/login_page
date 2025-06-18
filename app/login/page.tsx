@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 to-pink-400 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 to-pink-400 flex items-center justify-evenly">
       <div className="bg-[#fff] text-[#333] p-8 rounded-[12px] [box-shadow:0_8px_24px_rgba(0,_0,_0,_0.2)] w-[320px] text-center">
         <div className="text-center">
         <img src="/logo.svg" alt="Logo" className="mx-auto mb-6 w-24 h-24" />
@@ -42,13 +42,17 @@ export default function Home() {
           <div>
             <button
               type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Login
             </button>
           </div>
         </form>
+        <div className="text-gray-500 py-4">
+          <p>Want to create an account? <Link href="/." className="text-pink-500 font-semibold hover:underline">SignUp</Link></p>
+        </div>
       </div>
+      <img src="/phones.png" alt="Background" className= "flex justify-evenly max-w-svh opacity-90" />
     </div>
   );
 }

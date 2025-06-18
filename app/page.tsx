@@ -20,8 +20,9 @@ export default function Home() {
     }, 2000);
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600">
-      <div className="bg-white text-[#333] p-10 rounded-2xl shadow-3x1 w-[350px] text-center">
+    <div className="min-h-screen flex items-center justify-between bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600">
+      <img src="/phones.png" alt="Background" className= "flex justify-evenly max-w-svh opacity-90" />
+      <div className="bg-white text-[#333] p-10 rounded-2xl shadow-3x1 w-[350px] text-center m-auto">
         <div className="text-center">
           <img src="/logo.svg" alt="Logo" className="mx-auto mb-6 w-24 h-24" />
           <h1 className="text-3xl font-montserrat font-bold mb-4 text-transparent bg-clip-text bg-gray-900">Sign Up</h1>
