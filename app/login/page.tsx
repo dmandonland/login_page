@@ -6,34 +6,29 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-purple-900 to-pink-400 flex items-center justify-evenly">
       <div className="bg-[#fff] text-[#333] p-8 rounded-[12px] [box-shadow:0_8px_24px_rgba(0,_0,_0,_0.2)] w-[320px] text-center">
         <div className="text-center">
-        <img src="/logo.svg" alt="Logo" className="mx-auto mb-6 w-24 h-24" />
-          <h1 className="text-3xl font-montserrat font-bold mb-6 text-[#6a0dad]">Log In</h1>
+        <img src="/instaaaa.png" alt="Logo" className="mx-auto mb-6 w-24 h-24inline-block bg-top bg-auto w-[175px] h-[51px]" />
           <p className="mt-2 text-gray-600">Login to your account</p>
         </div>
         <form className="mt-8 space-y-6">
           <div className="space-y-4">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email address
-              </label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 autoComplete="email"
                 required
+                placeholder='Email address'
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               />
             </div>
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                Password
-              </label>
               <input
                 id="password"
                 name="password"
                 type="password"
                 autoComplete="new-password"
+                placeholder='Password'
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               />

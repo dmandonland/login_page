@@ -24,9 +24,8 @@ export default function Home() {
       <img src="/phones.png" alt="Background" className= "flex justify-evenly max-w-svh opacity-90" />
       <div className="bg-white text-[#333] p-10 rounded-2xl shadow-3x1 w-[350px] text-center m-auto">
         <div className="text-center">
-          <img src="/logo.svg" alt="Logo" className="mx-auto mb-6 w-24 h-24" />
-          <h1 className="text-3xl font-montserrat font-bold mb-4 text-transparent bg-clip-text bg-gray-900">Sign Up</h1>
-          <p className="mb-6 text-gray-500">Sign up to see photos and videos from your friends.</p>
+          <img src="/instaaaa.png" alt="Logo" className="inline-block bg-top bg-auto w-[175px] h-[51px]" />
+          <p className="mb-6 mt-4 text-gray-500">Sign up to see photos and videos from your friends.</p>
         </div>
         <form className="space-y-5" onSubmit={handleSubmit}>
           <div className="space-y-4">
@@ -55,13 +54,13 @@ export default function Home() {
           </div>
           <button
             type="submit"
-            className="w-full py-2 px-4 rounded-md shadow-sm text-sm font-semibold text-white bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:from-pink-600 hover:to-yellow-400 transition-colors duration-200"
+            className="w-full py-2 px-4 rounded-md shadow-sm text-sm font-montserrat font-medium text-white bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:from-yellow-600 hover:to-purple-600 transition-colors duration-200"
           >
             Sign Up
           </button>
         </form>
         <div className="text-gray-500 py-4">
-          <p>Already have an account? <Link href="/login" className="text-pink-500 font-semibold hover:underline">Login</Link></p>
+          <p>Already have an account? <Link href="/login" className="text-purple-600 font-semibold hover:underline">Login</Link></p>
         </div>
         {showSuccess && (
           <div className="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow">
